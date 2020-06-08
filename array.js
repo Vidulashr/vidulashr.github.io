@@ -3,6 +3,7 @@ for (i = 0;i<range;i++){
     createArray(range,i);
 }
 
+var colortoggledetect = false;
 
 //slider for color
 var colortoggle = document.getElementById("color");
@@ -23,6 +24,8 @@ var helpbutton = document.getElementById("myBtn");
 var algonames = document.getElementsByClassName("algo-options");
 var allnames = document.getElementsByClassName("allname");
 var speedtitle = document.getElementById("speed_title");
+
+
 
 colortoggle.addEventListener('change',e =>{
     if (!e.target.checked){
@@ -55,6 +58,7 @@ colortoggle.addEventListener('change',e =>{
         for (y in allnames) {
             allnames[y].style.color = 'dimgrey';
         }
+        colortoggledetect = false;
     }
     else{
         background.style.backgroundImage ="linear-gradient(black, #161616)";
@@ -85,8 +89,14 @@ colortoggle.addEventListener('change',e =>{
         for (y in allnames) {
             allnames[y].style.color = 'lightskyblue';
         }
+        colortoggledetect = false;
     }
 })
+
+
+if (colortoggledetect){
+    colortoggle.click();
+}
 
 
 var selected=null;
