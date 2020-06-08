@@ -1,0 +1,741 @@
+.title{
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 2.8vh;
+    margin-right: 0.5vh;
+    text-shadow: 0.1vh 0.1vh black,
+                0.2vh 0.2vh orange;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+
+@keyframes example {
+    0% {
+        text-shadow: 0.1vh 0.1vh orange,
+        0.2vh 0.2vh dimgrey;
+    }
+    50% {
+        text-shadow: 0.1vh 0.1vh dimgrey,
+        0.2vh 0.2vh orange;
+    }
+    100% {
+        text-shadow: 0.1vh 0.1vh orange,
+        0.2vh 0.2vh dimgrey;
+    }
+}
+
+body{
+    background-image: linear-gradient(black, #161616);
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    margin: 0.8vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-zoom: 125%;
+
+}
+
+
+.posthead{
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+
+}
+
+#slide_title{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 1vh;
+    font-size: 1.75vh;
+    margin-right: 2vh;
+}
+
+#speed_title{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 1vh;
+    font-size: 1.75vh;
+    margin-left: 2vh;
+}
+
+#indicator {
+    font-family: 'Montserrat', sans-serif;
+    color: lightblue;
+    font-size: 2.5vh;
+    margin-left: 2.5vh;
+    margin-right: 2.5vh;
+}
+
+#sortbutton{
+    display: inline-block;
+}
+
+#sort{
+    display: inline-block;
+    color: orange;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.5vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+    border-radius: 1.5vh;
+}
+
+#reset{
+    display: none;
+    color: orange;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.5vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+    border-radius: 1.5vh;
+    margin-left: 3vh;
+
+}
+
+#compare{
+    display: inline-block;
+    color: dodgerblue;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.5vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 0.5em 2em;
+    border: 0.16em solid #FFFFFF;
+    text-align: center;
+    transition: all 0.15s;
+    border-radius: 1.5vh;
+    margin-left: 2vh;
+}
+
+#sort:hover{
+    transition: 0.5s;
+    background-color: orange;
+    color: black;
+    border:0.16em solid dodgerblue;
+}
+
+#reset:hover{
+    transition: 0.5s;
+    background-color: orange;
+    color: black;
+    border:0.16em solid black;
+}
+
+#compare:hover{
+    transition: 0.5s;
+    background-color: dodgerblue;
+    color: white;
+    border:0.16em solid orange;
+}
+
+a{
+    text-decoration: none;
+}
+
+#header{
+    background-color: black;
+    margin: 1vh;
+}
+
+.header-right{
+    padding: 1vh;
+    background-color: black;
+}
+
+.options{
+    display: inline-block;
+    width: max-content;
+    position: absolute;
+    text-align: center;
+}
+
+#changeSize{
+    width: 50vh;
+    -webkit-appearance: none;
+
+}
+
+#changeSize::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 0.2vh;
+    cursor: pointer;
+    box-shadow: none;
+    background: darkgrey;
+    border-radius: 0px;
+    border: 0px solid darkgray;
+}
+
+#changeSize::-webkit-slider-thumb {
+    border: 2px white;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
+    height: 2vh;
+    width: 2vh;
+    border-radius: 5vh;
+    background: orange;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -1vh;
+}
+
+#changeSpeed{
+    width: 40vh;
+    -webkit-appearance: none;
+
+}
+
+#changeSpeed::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 0.2vh;
+    cursor: pointer;
+    box-shadow: none;
+    background: whitesmoke;
+    border-radius: 0px;
+    border: 0px solid darkgray;
+}
+
+#changeSpeed::-webkit-slider-thumb {
+    border: 2px white;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
+    height: 2vh;
+    width: 2vh;
+    border-radius: 5vh;
+    background: dodgerblue;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -1vh;
+}
+
+.slidecontainer{
+    margin-top: 0;
+    margin-left: 0.5vh;
+    margin-right: 2.5vh;
+    display: inline-block;
+}
+
+#speedcontainer{
+    direction: rtl;
+    margin-right: 0vh;
+}
+
+.algo-options{
+    color: white;
+    margin: 8vh;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    font-size: 2vh;
+    text-shadow: 0.1vh 0.1vh dodgerblue,
+                0.2vh 0.2vh darkgray;
+
+}
+
+.algo-options:hover{
+    color: orange;
+    transition: 0.25s;
+    font-weight: bold;
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
+
+}
+
+.logo{
+}
+
+.logo:hover #line1{
+    height: 1vh;
+    transition: 0.5s;
+    background-color: orange;
+    animation: paused;
+}
+.logo:hover #line2{
+    height: 1.7vh;
+    transition: 0.5s;
+    background-color: orange;
+    animation: paused;
+
+}
+.logo:hover #line3{
+    height: 2.5vh;
+    transition: 0.5s;
+    background-color: orange;
+    animation: paused;
+
+}
+#line1 {
+    height: 2.5vh;
+    width: 0.6vh;
+    background-color: white;
+    margin-right: 0.5vh;
+    display: inline-block;
+    animation-name: linesorter1;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    }
+#line2 {
+    height: 1vh;
+    width: 0.6vh;
+    background-color: white;
+    margin-right:0.5vh;
+    display: inline-block;
+    animation-name: linesorter2;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    }
+#line3 {
+    height: 1.7vh;
+    width: 0.6vh;
+    background-color: white;
+    margin-right: 10vh;
+    display: inline-block;
+    animation-name: linesorter3;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    }
+@keyframes linesorter3 {
+    0%{
+        height: 1.7vh;
+        width: 0.6vh;
+    }
+    50%{
+        height: 2.5vh;
+        width: 0.6vh;
+        background-color: orange;
+
+    }
+    100%{
+        height: 1.7vh;
+        width: 0.6vh;
+    }
+}
+@keyframes linesorter2{
+    0%{
+        height: 1vh;
+        width: 0.6vh;
+    }
+    50%{
+        height: 1.7vh;
+        width: 0.6vh;
+        background-color: orange;
+
+    }
+    100%{
+        height: 1vh;
+        width: 0.6vh;}}
+@keyframes linesorter1{
+    0%{
+        height: 2.5vh;
+        width: 0.6vh;
+    }
+    50%{
+        height: 1vh;
+        width: 0.6vh;
+        background-color: orange;
+
+    }
+    100%{
+        height: 2.6vh;
+        width: 0.6vh;}}
+
+
+.tile:hover{
+    top: -1vh;
+
+}
+
+
+
+#horline{
+    background-color: orange;
+    height: 0.2vh;
+    width: auto;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+    box-shadow: 0.2vh 0.2vh coral;
+
+}
+
+#horline2{
+    background-color: dodgerblue;
+    height: 0.2vh;
+    width: auto;
+    margin-top: 1.5vh;
+    margin-bottom: 1vh;
+    box-shadow: 0.2vh 0.2vh lightskyblue;
+
+}
+
+@keyframes line{
+    from {
+        background-color: orange;
+    }
+    to {
+        background-color: dodgerblue;
+    }
+}
+
+
+
+
+
+#bodycontainer{
+    width: 100%;
+    text-align: center;
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+#text{
+    color: black;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+    border: 2px solid orange;
+    background-color: transparent;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    padding: 25px;
+    position: relative;
+    transition: 0.5s;
+}
+
+#footclose{
+    text-align: center;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    left: 45%;
+    top: -50px;
+    align-self: center;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    transition: all 0.15s;
+    margin-top: 15px;
+
+}
+
+
+#footclose:hover{
+    color: orange;
+    font-weight: bold;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: orange; /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 2vh;
+    border: 0.5vh solid dodgerblue;
+    width: 60%;
+}
+
+/* The Close Button */
+.close {
+    color: orange;
+    float: right;
+    font-size: 5vh;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modaltext{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-shadow: 0.1vh 0.1vh orange,
+                0.2vh 0.2vh blue;
+}
+
+#myBtn{
+    display: inline-block;
+    position: relative;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    font-size: 2vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 0.5em 0.8em;
+    border: 0.16em dashed orange;
+    text-align: center;
+    transition: all 0.25s;
+    border-radius: 5vh;
+    left: -40vh;
+
+}
+
+#myBtn:hover{
+    border-color: darkgray;
+    transform: rotate(360deg);
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+
+
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: orange; /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 2vh;
+    border: 0.5vh solid dodgerblue;
+    width: 40%;
+}
+
+/* The Close Button */
+.close2 {
+    color: orange;
+    float: right;
+    font-size: 4vh;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.close2:hover,
+.close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modaltext2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-shadow: 0.1vh 0.1vh orange;}
+
+.tile{
+    outline-color: black;
+    outline: 0.3vh groove;
+}
+
+#loader{
+    height: 2vh;
+    width: 0.6vh;
+    background-color: dimgrey;
+    margin-right: 0.5vh;
+    display: none;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-play-state: paused;
+    animation-timing-function: ease-out;
+    margin-left: 2.2vh;
+    position: relative;
+    top: 0.5vh;
+    transition: 0.1s;
+}
+
+
+@keyframes spin{
+
+    0%{
+        height: 2vh;
+        width: 0.6vh;
+        background-color: dimgrey;
+        margin-right: 0.5vh;
+        display: inline-block;
+        margin-left: 2.2vh;
+        position: relative;
+        top: 0.5vh;
+
+
+    }
+    25% {
+        height: 0.7vh;
+        width: 0.7vh;
+        background-color: white;
+        margin-right: 0.5vh;
+        display: inline-block;
+        margin-left: 2.2vh;
+        position: relative;
+        top: 0.5vh;
+        transform: rotate(45deg);
+    }
+    50% {
+        height: 2vh;
+        width: 0.6vh;
+        background-color: orange;
+        margin-right: 0.5vh;
+        display: inline-block;
+        margin-left: 2.2vh;
+        position: relative;
+        top: 0.5vh;
+        transform: rotate(90deg);
+    }
+
+    75% {
+        height: 0.7vh;
+        width: 0.7vh;
+        background-color: dodgerblue;
+        margin-right: 0.5vh;
+        display: inline-block;
+        margin-left: 2.2vh;
+        position: relative;
+        top: 0.5vh;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        height: 2vh;
+        width: 0.6vh;
+        background-color: dimgrey;
+        margin-right: 0.5vh;
+        display: inline-block;
+        margin-left: 2.2vh;
+        position: relative;
+        top: 0.5vh;
+        transform: rotate(180deg);
+    }
+}
+
+.spacer{
+    height: 2vh;
+    width: 0.2vh;
+    background-color: dimgrey;
+    display: inline-block;
+    position: relative;
+    top: 0.5vh;
+}
+
+
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 6vh;
+    height: 3.4vh;
+    top: 0.9vh;
+    left: 5vh;
+}
+
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.6vh;
+    width: 2.6vh;
+    left: 0.4vh;
+    bottom: 0.4vh;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:focus + .slider {
+    box-shadow: 0 0 0.1vh #2196F3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(2.6vh);
+    -ms-transform: translateX(2.6vh);
+    transform: translateX(2.6vh);
+    background-color: black;
+    background: radial-gradient(circle at 19% 19%, dodgerblue 41%, black 43%);
+
+}
+.slider.round {
+    border-radius: 3.4vh;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
