@@ -1,0 +1,57 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOOPStats</title>
+    <link rel="stylesheet" type="text/css" href="{%  static 'NBAPlayer/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png"  href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1gLe9w4rpo9FEPbN3mE5xNc8d8vTdMBer8dtv6OWyNLymhi12&usqp=CAU">
+</head>
+<button src="" id="signup">SIGN IN</button>
+<body style="background-image: linear-gradient(#232659,#335AA6);height: 500vh;background-repeat: no-repeat">
+<div id="htitle" >
+    <a href="Home.html"> <h1 id="titlename"><img src="https://theundefeated.com/wp-content/uploads/2017/06/kobe_bryant_v2.png" style="width: 1.1vh;height: 2.8vh;margin-right: 0.7vh;margin-top: 1vh;">HOOPStats</h1></a>
+    <span id="ball"></span><span id="ball2"></span><span id="ball3"></span>
+    <div class="rectangle"></div>
+    <div class="rectangle" style="background-color: #232659 ;position: relative; top:2px"></div>
+    <div class="rectangle" style="background-color: #F205CB;position: relative; top:2px"></div>
+</div>
+<div id="backbutton" href="Home.html"><a id="backbuttontip"></a><a id="backbuttonbody"></a></div>
+<div id="headerbelowbar" ></div>
+<div id="statcontent">
+    <span id="playerheader">
+    <a id="playernumber" style="display: none">#24</a><a id="playername"></a>
+    <a id="playerteam">Los Angeles Lakers</a><a id="playerht"></a><a id="playerwt"></a><a id="playerage">39 yrs</a>
+    <a id="playerdraft">1996 DRAFT P13</a>    <a id="playerexp">20 seasons</a></span>
+    <span id="averages">
+         <a class="stat" id="ppg">N/A</a><a class="stat" id="apg">N/A</a>
+         <a class="stat"id="rpg">N/A</a><a class="stat" id="bpg">N/A</a>
+        <a class="stat"id="fgp">N/A</a>
+    </span>
+
+    <a id="playercontent"></a>
+
+
+
+</div>
+<div class="search" id="searchbar" style="transition: 1s">
+  <input name="players" list="playerlist" id="playerSearch" type="search" placeholder="Search for a Player..." class="search-box" />
+    <datalist id="playerlist" style="display: inline-block">
+    </datalist>
+  <span id="button" onclick="search()" class="search-button">
+    <span class="search-icon"  ></span>
+      <span class="search-icon2"></span>
+      <span class="dot"></span>
+  </span>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{%  static 'js/app.js' %}"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.15.1/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.15.1/firebase-analytics.js"></script>
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+</body>
+</html>
