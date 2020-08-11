@@ -493,8 +493,8 @@ allbutton.onclick=(function () {
     mainbody.insertBefore(selectname,bubblename);
     mainbody.insertBefore(cocktailname,clone2);
     mainbody.insertBefore(insertname,cocktailname);
-    mainbody.insertBefore(heapname,clone4);
-    mainbody.insertBefore(shellname,heapname);
+    mainbody.insertBefore(shellname,clone4);
+    mainbody.insertBefore(heapname,shellname);
 
 
     //start algos
