@@ -466,7 +466,7 @@ allbutton.onclick=(function () {
     cocktailname.setAttribute("class","allname");
 
     var heapname = document.createElement("a");
-    heapname.innerText= "SHELL SORT";
+    heapname.innerText= "HEAP SORT";
     heapname.style.fontFamily = 'Montserrat';
     heapname.style.fontSize = 'large';
     heapname.style.color = "dodgerblue";
@@ -477,7 +477,7 @@ allbutton.onclick=(function () {
     heapname.setAttribute("class","allname");
 
     var shellname = document.createElement("a");
-    shellname.innerText= "HEAP SORT";
+    shellname.innerText= "SHELL SORT";
     shellname.style.fontFamily = 'Montserrat';
     shellname.style.fontSize = 'large';
     shellname.style.color = "dodgerblue";
