@@ -3,7 +3,6 @@ for (i = 0;i<range;i++){
     createArray(range,i);
 }
 
-var colortoggledetect = false;
 
 //slider for color
 var colortoggle = document.getElementById("color");
@@ -24,8 +23,6 @@ var helpbutton = document.getElementById("myBtn");
 var algonames = document.getElementsByClassName("algo-options");
 var allnames = document.getElementsByClassName("allname");
 var speedtitle = document.getElementById("speed_title");
-
-
 
 colortoggle.addEventListener('change',e =>{
     if (!e.target.checked){
@@ -58,7 +55,6 @@ colortoggle.addEventListener('change',e =>{
         for (y in allnames) {
             allnames[y].style.color = 'dimgrey';
         }
-        colortoggledetect = false;
     }
     else{
         background.style.backgroundImage ="linear-gradient(black, #161616)";
@@ -89,14 +85,8 @@ colortoggle.addEventListener('change',e =>{
         for (y in allnames) {
             allnames[y].style.color = 'lightskyblue';
         }
-        colortoggledetect = false;
     }
 })
-
-
-if (colortoggledetect){
-    colortoggle.click();
-}
 
 
 var selected=null;
@@ -327,8 +317,9 @@ sort.onclick=(function () {
         reset.style.display = "inline-block";
     }
 
+    //NOT COMPLETE
     else if (selected===optionmerge){
-        shellSort(0,slider.value-1,"bodycontainer");
+        shellSort(0,slider.value,slider.value,0,0,0,"bodycontainer");//HEREEEEEEEEEEEEEEEEEEEEEE
         sort.style.display = "none";
         reset.style.display = "inline-block";
     }
@@ -406,9 +397,16 @@ allbutton.onclick=(function () {
     clone4.style.transform = "rotate(180deg)";
     clone4.style["display"] = "inline-block";
     clone4.style.textAlign= "center";
-    clone4.style.width = "100%";
+    clone4.style.width = "50%";
     parent.appendChild(clone4);
 
+    var clone5 = all.cloneNode(true);
+    clone5.setAttribute("id","bodycontainer6");
+    clone5.style.transform = "rotate(180deg)";
+    clone5.style["display"] = "inline-block";
+    clone5.style.textAlign= "center";
+    clone5.style.width = "50%";
+    parent.appendChild(clone5);
 
 
 
@@ -473,10 +471,21 @@ allbutton.onclick=(function () {
     heapname.style.fontSize = 'large';
     heapname.style.color = "dodgerblue";
     heapname.style.fontWeight = "bold";
-    heapname.style.width = "100%";
+    heapname.style.width = "50%";
     heapname.style.textAlign = "center";
     heapname.style["display"] = "inline-block";
     heapname.setAttribute("class","allname");
+
+    var shellname = document.createElement("a");
+    shellname.innerText= "SHELL SORT";
+    shellname.style.fontFamily = 'Montserrat';
+    shellname.style.fontSize = 'large';
+    shellname.style.color = "dodgerblue";
+    shellname.style.fontWeight = "bold";
+    shellname.style.width = "50%";
+    shellname.style.textAlign = "center";
+    shellname.style["display"] = "inline-block";
+    shellname.setAttribute("class","allname");
 
 
 
@@ -484,7 +493,8 @@ allbutton.onclick=(function () {
     mainbody.insertBefore(selectname,bubblename);
     mainbody.insertBefore(cocktailname,clone2);
     mainbody.insertBefore(insertname,cocktailname);
-    mainbody.insertBefore(heapname,clone4);
+    mainbody.insertBefore(shellname,clone4);
+    mainbody.insertBefore(heapname,shellname);
 
 
     //start algos
@@ -493,6 +503,7 @@ allbutton.onclick=(function () {
     insertionSort(1,0,0,"bodycontainer3");
     cocktailSort1(0,slider.value-1,"bodycontainer4",0);
     maxheap(slider.value-1,"bodycontainer5");
+    shellSort(0,slider.value,slider.value,0,0,0,"bodycontainer6");
 
 })
 
@@ -535,6 +546,14 @@ function rescale(){
         var newwidth5 = parseInt(e5[y].style.getPropertyValue("width"),10)/2;
         e5[y].style.height = newheight5+"px";
         e5[y].style.width = newwidth5+"px";
+    }
+
+    var e6 = document.getElementById("bodycontainer6").querySelectorAll(".tile");
+    for (let y = 0;y<e6.length;y++){
+        var newheight6 = parseInt(e6[y].style.getPropertyValue("height"),10)/2;
+        var newwidth6 = parseInt(e6[y].style.getPropertyValue("width"),10)/2;
+        e6[y].style.height = newheight6+"px";
+        e6[y].style.width = newwidth6+"px";
     }
 }
 
@@ -784,7 +803,6 @@ function insertionSort(n,end,final,container) {
 
 
 //PENDING
-
 function mergeSort(curr,n,start,end,container) {
     var e = document.getElementById(container).querySelectorAll(".tile");
     var middle =n/2;
@@ -896,8 +914,6 @@ function cocktailSort2(start,end,container,main){
         }
     }
 }
-
-
 
 //complete
 function maxheap(end,container){
@@ -1070,39 +1086,62 @@ function swaphighlow(start,end,container){
 
 
 
-
-function shellSort(start,end, container, iteration,n,array){
+//Working on it
+function shellSort(start,end,saved,k,startnode,currentnode,container,){
     var e = document.getElementById(container).querySelectorAll(".tile");
-    var gap = Math.floor(end/2);
-    var n = start;
-    var array = [];
-    var temp = 0;
-    var iteration = gap;
-    var id = setInterval(frame,100);
+    startnode = start;
+    currentnode = Math.floor(end/2);
+    startsave = startnode;
+    currentsave = currentnode;
+    k = currentnode;
+    var repeat = false;
+    var id = setInterval(frame,speed);
     function frame() {
         colorheap(e.length,container);
-        temp = array[gap]
-        if (iteration===n) {
-            clearInterval(id);
-            shellSort(start,end,container,iteration);
 
-        } else if (sorted(container)) {
+        if(currentnode==startnode){
             colorflash(container);
+            clearInterval(id);}
+
+        if (sorted(container)) {//If array is sorted, clear interval and display final colors
+            colorflash(container);
+            clearInterval(id);}
+
+        else if (startnode === (saved-k)) {
             clearInterval(id);
-        } else {
-            if ((parseInt(e[currentnode].style.getPropertyValue("height"), 10)) < (parseInt(e[startnode].style.getPropertyValue("height"), 10))) {
+            shellSort(0,k,saved,0,0,0,container);
+
+        } else { //If array is not sorted
+            if ((parseInt(e[startnode].style.getPropertyValue("height"), 10)) > (parseInt(e[currentnode].style.getPropertyValue("height"), 10))) {
                 e[startnode].style.backgroundColor="red";
                 e[currentnode].style.backgroundColor="red";
                 var h3 = parseInt(e[currentnode].style.getPropertyValue("height"), 10);
                 e[currentnode].style.height = parseInt(e[startnode].style.getPropertyValue("height"), 10) + "px";
                 e[startnode].style.height = h3 + "px";
-                currentnode += 1;
-                startnode += 1;
+
+
+                if ((startnode-k) < 0){
+                    currentnode += 1;
+                    startnode += 1;
+                    currentsave += 1;
+                    startsave += 1;
+                    repeat = true;
+                }
+                else{
+                    currentnode -= k;
+                    startnode -= k;
+                    repeat = false;}
+
+
+
             } else {
                 e[startnode].style.backgroundColor="green";
                 e[currentnode].style.backgroundColor="green";
-                currentnode += 1;
-                startnode += 1;
+                startsave +=1;
+                currentsave +=1;
+                currentnode = currentsave;
+                startnode = startsave;
+                repeat = false;
             }
         }
     }
