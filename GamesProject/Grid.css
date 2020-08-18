@@ -223,26 +223,26 @@ body{
 
 #button1{
     position: absolute;
-    right: 130px;
-    top: 250px;
+    right: 8em;
+    top: 16em;
 }
 
 #button2{
     position: absolute;
-    right: 130px;
-    top: 450px;
+    right: 8em;
+    top: 28em;
 }
 
 #button3{
     position: absolute;
-    right: 1px;
-    top: 350px;
+    right: 0em;
+    top: 22em;
 }
 
 #button4{
     position: absolute;
-    right: 250px;
-    top: 350px;
+    right: 16m;
+    top: 22em;
 }
 
 .d-pad {
@@ -265,7 +265,7 @@ body{
 
 .up {
     left: 14.5em;
-    top: -596px;
+    top: -37em;
     border-radius: 0.75em 0.75em 0 0;
 }
 .up .label {
@@ -274,7 +274,7 @@ body{
 
 .right {
     top: -31em;
-    right: -178px;
+    right: -11em;
     border-radius: 0 0.75em 0.75em 0;
 }
 .right .label {
@@ -284,7 +284,7 @@ body{
 
 .down {
     left: 14.5em;
-    bottom: 586px;
+    bottom: 37em;
     border-radius: 0 0 0.75em 0.75em;
 }
 .down .label {
@@ -293,7 +293,7 @@ body{
 
 .left {
     top: -31em;
-    left: 88px;
+    left: 6em;
     border-radius: 0.75em 0 0 0.75em;
 }
 .left .label {
