@@ -131,11 +131,16 @@
     font-size: 75px;
     position: absolute;
     top: -63px;
-    left:30px;
-    color: #5d6978;
-    text-shadow: 0.2vh 0.2vh lightgrey, 0.3vh 0.3vh black;
-
+    left: 30px;
+    color: #eee;
+    text-shadow: 0.2vh 0.2vh #311293, 0.3vh 0.3vh #871e8d;
 }
+
+
+
+
+
+
 
 #gameover{
     color: #1d582f;
