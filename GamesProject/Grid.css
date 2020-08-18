@@ -221,7 +221,7 @@ td {
 }
 
 body{
-    background-image: linear-gradient(darkgrey, rgba(137, 137, 137, 0.6));
+    background-image: linear-gradient(#a9a9a900, rgba(137, 137, 137, 0.6));
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
