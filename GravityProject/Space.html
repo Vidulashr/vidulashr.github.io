@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GravitySim</title>
+    <link rel="stylesheet" type="text/css" href="Main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: black;color: black">
+<div id="background">
+<span id="title" style="position: relative; top: 10px;left:10px">
+    <a id="main-title">Gravity Simulator</a>
+    <div class="planet" id="logo-title">
+        <div class="planet" id="moon-title"></div>
+    </div>
+    <div id="options">
+    <label id="color" class="switch">
+            <input type="checkbox" id="colortoggle">
+            <span class="slider round"></span>
+    </label>
+    <div class="slidecontainer">
+            <b id="slide_title">MASS</b>
+            <input type="range" min="1000" max="10000" step="10" id="changeSize">
+            <b id="indicator">1000</b>
+            <button id="clear-planets">CLEAR</button>
+    </div>
+    </div>
+</span>
+<span id="space">
+    <div id="sun" style="display: block"></div>
+</span>
+</div>
+<script type="text/javascript" src="App.js" ></script>
+</body>
+</html>
