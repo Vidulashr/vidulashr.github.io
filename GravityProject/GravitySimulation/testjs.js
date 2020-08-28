@@ -225,6 +225,7 @@ canvas.addEventListener("mouseup", e => {
 );
 
 const animate = () => {
+    console.log(innerSolarSystem.masses);
     innerSolarSystem
         .updatePositionVectors()
         .updateAccelerationVectors()
@@ -236,14 +237,9 @@ const animate = () => {
 
     for (let i = 0; i < massesLen; i++) {
         const massI = innerSolarSystem.masses[i];
-
-
         const x = width / 2 + massI.x * scale;
         const y = height / 2 + massI.y * scale;
-
-
         massI.manifestation.draw(x, y);
-
     }
     if (dragging) {
         ctx.beginPath();

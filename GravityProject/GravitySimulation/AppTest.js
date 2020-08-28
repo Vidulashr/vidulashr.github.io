@@ -96,7 +96,6 @@ $(document).ready(function() {
 
     var option_back = $('#option-background');
     var option_star = $('#option-star');
-    var option_gravity = $('#option-gravity');
     var option_planet = $('#option-planets');
     var slider = $('.slider');
     var bg = $('#background');
@@ -137,11 +136,6 @@ $(document).ready(function() {
             starswitch= false;
         }
     });
-
-    //Option to turn off gravity
-    option_gravity.change(function () {
-        alert("working on it");
-    })
 
     //Option to use preset planet sizes
     option_planet.change(function () {

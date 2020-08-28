@@ -149,6 +149,7 @@
     background-color: dodgerblue;
     border-color: black;
     outline: none;
+    cursor: pointer;
 }
 
 
@@ -317,6 +318,7 @@ input:checked + .slider:before {
 }
 #option-icon:hover{
     transform: rotate(180deg) scale(0.0675);
+    cursor: pointer;
 }
 
 #option-box{
