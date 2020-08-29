@@ -51,6 +51,7 @@
     width: 102.4vh;
     animation: flare 2s;
     transform: scale(0.1) rotate(45deg);
+    background-repeat: no-repeat;
 }
 
 #options{
