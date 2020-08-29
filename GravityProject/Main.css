@@ -212,6 +212,7 @@
     cursor: grab;
     top: -0.6vh;
     position: relative;
+    -webkit-appearance: none;
 }
 #changeSize::-webkit-slider-runnable-track{
     width: 100%;
@@ -220,6 +221,7 @@
     background: white;
     border-radius: 0;
     border: 0 solid white;
+    -webkit-appearance: none;
 }
 
 #changeSize::-webkit-slider-thumb {
@@ -232,6 +234,7 @@
     -webkit-appearance: none;
     margin-top: -1vh;
     overflow: hidden;
+    -webkit-appearance: none;
 }
 
 #space{
