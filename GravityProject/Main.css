@@ -208,7 +208,7 @@
 }
 
 #changeSize{
-    width: 50vh;
+    width: 30vh;
     cursor: grab;
     top: -0.6vh;
     position: relative;
