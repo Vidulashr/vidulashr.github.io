@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GraVisualizer</title>
+    <link rel="stylesheet" type="text/css" href="Main.css">
+    <link rel="icon" href="android-chrome-192x192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: black;color: black">
+<div id="background">
+    <span id="info-box" style="right: 250vh">
+        <h2 style="color: dodgerblue;font-size: 2.5vh"><b>Welcome to GraVisualizer!</b></h2>
+        <p style="font-size: 1.75vh">This is a tool to <b style="color: #fabc14">visualize</b> the effects of gravity with objects of different masses relative to the sun.</p>
+        <br>
+        <p style="font-size: 1.75vh"><b style="color: dodgerblue ;font-size: 1.75vh">Step 1</b> - Input Mass of Object</p>
+        <p style="font-size: 1.75vh"><b style="color: dodgerblue;font-size: 1.75vh">Step 2</b>- Click anywhere in the space</p>
+        <p style="font-size: 1.75vh"><b style="color: dodgerblue;font-size: 1.75vh">Step 3</b> - Observe the effects with the sun ON and OFF</p>
+        <br>
+        <h3 style="color: #fabc14;font-size: 2vh">"Because there is a law such as GRAVITY, the universe can and will create itself from NOTHING"</h3>
+        <h3 style="color: #fabc14;font-size: 2vh">- Stephen Hawking</h3>
+        <br><br>
+        <hr>
+        <p style="font-size: 1.75vh">Check out my other projects on <a href="https://github.com/vidulashr"><b style="color: dodgerblue">GitHub</b></a></p>
+        <p><b style="color: black;font-size: 1.5vh">Copyright <span>&#169;</span> 2020 Vidulash Rajaratnam</b></p>
+    </span>
+    <span id="title" style="position: relative; top: 1vh;left:1vh">
+        <a id="main-title"><b id="main-title-gra">Gra</b>Visualizer</a>
+    <div class="planet" id="logo-title">
+        <div class="planet" id="moon-title"></div>
+    </div>
+    <div id="options">
+    <label id="color" class="switch">
+            <input type="checkbox" id="colortoggle">
+            <span class="slider round"></span>
+    </label>
+    <div class="slidecontainer">
+            <b id="slide_title">MASS</b>
+            <input type="range" min="1000" max="10000" step="10" id="changeSize">
+            <b id="indicator">5500</b>
+            <button id="clear-planets">CLEAR</button>
+            <button id="add-cluster">CLUSTER</button>
+    </div>
+    <span id="particle">Particles:<a id="particlecount">0</a></span>
+    <span id="option-box" style="width: 0;height: 0;left: 100%">
+        <br>
+        <label  id="option-background" class="container">Background
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <br>
+        <label  id="option-star" class="container">White Dwarf
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <br>
+        <label id="option-gravity" class="container">Trail
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <br>
+        <label id= "option-planets" class="container">Planets
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+    </span>
+    <img id="option-icon" src="options.jpg" alt="Options">
+</div>
+<div id="horline"></div>
+</span >
+    <div id="space">
+        <canvas id="canvas"></canvas>
+    </div>
+</div>
+<script type="text/javascript" src="AppTest.js" ></script>
+<script type="text/javascript" src="Gravity2.js" ></script>
+</body>
+</html>
