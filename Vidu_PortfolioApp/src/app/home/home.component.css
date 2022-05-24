@@ -1,0 +1,51 @@
+.grid-one{
+    transition: height 1s ease;
+    background: url('src\assets\images\profile.jpg');
+    opacity: 45%;
+
+    background-size: auto 140%;
+
+    background-position-x: -2pc;
+    background-position-y: -3pc;
+
+    border-radius: 75px;
+    filter: sepia(100%) hue-rotate(175deg);
+}
+
+.mat-grid-tile#grid-two{
+    overflow:visible;
+    top: 3pc;
+
+}
+
+.container{
+    margin: 2pc;
+}
+
+h1{
+    transition: opacity 1s ease;
+    font-size: xxx-large;
+    line-height: 4pc;
+    padding: 10px 0;
+    margin-bottom: -100px;
+}
+
+.grad-text{
+    text-align: center;
+    background: linear-gradient(to right, #00a6ff 20%, rgba(47, 79, 133, 0.87) 40%, rgba(47, 79, 133, 0.87) 60%, #00a6ff 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+
+}
+
+@keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+

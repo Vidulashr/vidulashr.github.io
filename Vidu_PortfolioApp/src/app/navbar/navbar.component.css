@@ -1,0 +1,36 @@
+.spacer{
+    flex: 1 1 auto;
+  }
+
+.buttonspacer{
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline;
+}
+
+#header-name:hover span{
+    color: rgb(0, 166, 255);;
+    max-width:300px;
+}
+#header-name:hover{
+    color:rgb(0, 166, 255);;
+    cursor: pointer;
+}
+
+#header-name>span {
+    display:inline-block;
+    max-width:0;
+    overflow:hidden;
+    transition:max-width 1s;
+    vertical-align:bottom;
+ }
+
+.mat-flat-button:hover{
+    color:rgb(0, 166, 255);;
+}
+
+.dot{
+    margin-left: 4px;
+    margin-right: 2px;
+}
+

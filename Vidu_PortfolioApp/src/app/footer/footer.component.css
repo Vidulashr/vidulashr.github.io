@@ -1,0 +1,40 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0px;
+}
+
+.mat-toolbar{
+    height: 50px;
+}
+
+
+h4{
+    font-size: small;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.mat-toolbar.mat-accent{
+    background-image: linear-gradient(to left, #00a6ff , rgba(47, 79, 133, 0.87));
+}
+
+.icon-set{
+    margin-top: 6px;
+}
+
+.icon-space{
+    width:20px;
+    display: inline-block;
+}
+
+.dot{
+    margin-right: 10px;
+    position: relative;
+    left: -1.2pc;
+    bottom: -0.2pc;
+    background-color: rgba(47, 79, 133, 0.87);
+}

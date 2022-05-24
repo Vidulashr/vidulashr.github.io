@@ -1,0 +1,114 @@
+.mat-headline{
+    font-size: 30px;
+}
+
+#contact-title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container{
+    margin-right: 125px;
+    margin-left: 125px;
+    margin-top: 35px;
+}
+
+#exp-subtitle{
+    text-align: center;
+    color:  rgba(47, 79, 133, 0.54);
+    margin-bottom:2pc;
+}
+
+.mat-card{
+    transition: width 1s ease;
+    margin: 1pc;
+    height: 100%;
+    background: linear-gradient(to left,rgb(234, 243, 246),white);
+}
+
+.mat-card-title{
+    color: black;
+    font-weight: bolder;
+}
+
+.mat-icon{
+    font-size:20px;
+}
+
+h2{
+    font-weight: bolder;
+}
+
+h1{
+    margin: 0%;
+    padding: 0%;
+    font-size: 30px;
+    display:inline-block;
+}
+
+#gravisual{
+    background: url(src\assets\images\gravisualizerbg.png);
+    opacity: 100%;
+    filter: sepia(100%) hue-rotate(175deg);
+    transition: all 0.5s ease;
+    background-size: 100%;
+    background-position-x: 0px;
+    background-position-y: 20px;
+}
+
+#gravisual:hover{
+    background-color: rgb(163, 173, 182);
+    background-blend-mode: exclusion;
+    
+}
+#gravisual:hover .mat-chip-list{
+    opacity: 100%;
+}
+#gravisual:hover .project-title{
+    opacity: 100%;
+}
+
+#visorter{
+    background: url(src\assets\images\visualsorterbg.png);
+    opacity: 100%;
+    filter: sepia(100%) hue-rotate(175deg);
+    transition: all 0.5s ease;
+    background-size: 100%;
+    background-position-x: 0px;
+    background-position-y: 20px;
+}
+
+
+#visorter:hover{
+    background-color: rgb(163, 173, 182);
+    background-blend-mode: exclusion;
+}
+#visorter:hover .mat-chip-list{
+    opacity: 100%;
+}
+#visorter:hover .project-title{
+    opacity: 100%;
+}
+
+.mat-chip-list{
+    height: 175%;
+    width: 100%;
+    align-content: flex-end;
+    opacity: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.mat-chip{
+    font-size: 0.9pc;
+}
+
+.project-title{
+    color: black;
+    text-align: center;
+    font-size: 1.5pc;
+    font-weight: bold;
+    margin-top: 1.5pc;
+    margin-bottom: -4pc;
+    opacity: 0%;
+}
